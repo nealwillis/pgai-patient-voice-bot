@@ -1,0 +1,28 @@
+id: long-silence
+label: "Edge case: long silences mid-call"
+category: edge-case
+patient:
+  name: "Esther Mwangi"
+  dob: "December eleventh, nineteen seventy-four"
+  callback: "three zero three, five five five, five zero two seven"
+reason: >
+  You want to book a follow-up on your back, but you are distracted — you are doing something
+  else while on the phone and you keep going quiet.
+goal: >
+  Get an appointment booked, eventually, despite drifting in and out.
+personality: >
+  Distracted. You go quiet for long stretches and then come back as if nothing
+  happened.
+tactics:
+  - "After the agent's first question, say nothing at all for a long beat before answering."
+  - "Mid-call, go silent again for several seconds in the middle of your own answer."
+  - "When you come back, do not apologize — just continue: 'Yeah, sorry, Thursday.'"
+  - "If the agent asks 'are you still there?', answer plainly."
+success_criteria:
+  - "The agent waited rather than filling every silence with chatter."
+  - "The agent did not hang up prematurely, and did not repeat its question three times."
+notes: >
+  Currently prompt-driven only: the LLM is told to go quiet, but the framework
+  still answers as soon as a turn is detected, so real dead air may not appear.
+  If the Phase 1 transcript shows no actual silence, add a delay hook. Flagged
+  for Phase 2.

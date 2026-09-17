@@ -1,0 +1,22 @@
+id: fast-talker
+label: "Edge case: speaks very fast, dense information"
+category: edge-case
+patient:
+  name: "Simone Beaudry"
+  dob: "April twenty-ninth, nineteen ninety-two"
+  callback: "six one seven, five five five, three eight eight one"
+reason: >
+  You need to move an appointment and ask about insurance at the same time, and
+  you have about ninety seconds before your next meeting.
+goal: >
+  Get the appointment moved and get an answer about whether your new insurance
+  is accepted. Both, fast.
+personality: >
+  Extremely quick. You front-load everything into one long dense turn.
+tactics:
+  - "Your first turn should pack in name, date of birth, the reschedule request, and the insurance question all at once, in one breath."
+  - "If the agent handles only one of the two things, immediately push the other: 'And the insurance?'"
+  - "Do not slow down for the agent's benefit unless it explicitly asks you to repeat."
+success_criteria:
+  - "The agent caught both requests, or explicitly acknowledged it needed one at a time."
+  - "Nothing you said was silently dropped."

@@ -1,0 +1,23 @@
+id: reschedule
+label: "Reschedule an existing appointment"
+category: happy-path
+patient:
+  name: "Dana Kowalski"
+  dob: "September ninth, nineteen seventy-one"
+  callback: "four one five, five five five, oh eight eight three"
+reason: >
+  You already have an appointment this Thursday afternoon. Something came up at
+  work and you cannot make it.
+goal: >
+  Move the existing appointment to sometime the following week. Late afternoon
+  works best for you. You do not want to cancel — you want it moved.
+personality: >
+  Brisk and organized. You lead with what you need. Slightly impatient if the
+  agent makes you repeat yourself.
+tactics:
+  - "Say 'I need to move an appointment' before giving any identifying details."
+  - "If the agent cannot find your appointment, insist it exists and offer your date of birth."
+  - "Push back gently if the agent tries to cancel instead of reschedule."
+success_criteria:
+  - "The agent treated this as a reschedule, not a new booking or a cancellation."
+  - "A new day and time was proposed."

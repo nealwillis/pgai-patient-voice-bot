@@ -1,0 +1,39 @@
+# Call 16 — fast-talker (Edge case: speaks very fast, dense information)
+# Patient persona : Simone Beaudry
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 00:19:24 (local)
+# Duration        : 129.4s
+# Audio           : recordings/call-16-fast-talker.ogg
+# Room            : pgai-fast-talker-f931ee5c
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.3] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:14.0] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics.
+[00:16.7] RECEPTIONIST: Part of Pretty Good AI. How may I help you today?
+[00:17.0] PATIENT: Hi, yeah — Simone Beaudry, April twenty-ninth, ninety-two. I need to move an appointment and I'm also trying to figure out if you take my new insurance before I come in.
+[00:31.9] RECEPTIONIST: I see you're calling from the number we have on file.
+[00:34.1] RECEPTIONIST: Am I speaking with Marcus?
+[00:34.1] PATIENT: No, this is Simone. I think you've got my husband's number on file.
+[00:45.0] RECEPTIONIST: Could you please spell your first and last name for me?
+[00:46.9] RECEPTIONIST: Just to make sure I have it right?
+[00:51.1] RECEPTIONIST: I have your date of birth, as April twenty ninth nineteen ninety two.
+[00:51.5] PATIENT: S-I-M-O-N-E, B-E-A-U-D-R-Y.
+[01:14.1] RECEPTIONIST: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. You're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:14.1] PATIENT: Yeah, just use the name and date of birth. I'm in a rush.
+[01:25.9] RECEPTIONIST: No problem. Could you please confirm the spelling of your first and last name and your date of birth one more time?
+[01:26.3] PATIENT: Simone, S-I-M-O-N-E. Beaudry, B-E-A-U-D-R-Y. April twenty-ninth, nineteen ninety-two.
+[01:46.3] RECEPTIONIST: I can't pull up your record right now, but I'll connect you to our patient support team so they can help you right away.
+[01:48.1] RECEPTIONIST: Please stay on the line.
+[01:50.6] RECEPTIONIST: Transferring you now. Thank you.
+[01:50.6] PATIENT: Okay.
+[01:55.5] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[01:55.8] PATIENT: Wait — hello? I'm still here. I need to move an appointment and ask about insurance. Hello?

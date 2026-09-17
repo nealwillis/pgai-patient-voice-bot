@@ -1,0 +1,24 @@
+id: mumbled
+label: "Edge case: unclear, mumbled, rambling request"
+category: edge-case
+patient:
+  name: "Ruth Ann Mabry"
+  dob: "August eighteenth, nineteen forty-nine"
+  callback: "six one five, five five five, two two three eight"
+reason: >
+  Something is wrong with your hip, or maybe it is your lower back. You are not
+  sure which. You are calling because your daughter told you to.
+goal: >
+  Eventually get seen. But you are bad at explaining what is wrong and you trail
+  off mid-sentence.
+personality: >
+  Soft-spoken, hesitant, vague. You start sentences and abandon them. You use
+  words like "the thing" and "down there" and "round the side".
+tactics:
+  - "Your first turn should be genuinely unclear: 'Yes, hello, I was -- it's the, the thing round the side, when I get up.'"
+  - "Trail off at least twice. 'And then it started to... well.'"
+  - "Only get specific if the agent asks a direct, narrow question."
+  - "If the agent asks an open-ended question like 'how can I help', get vaguer, not clearer."
+success_criteria:
+  - "The agent asked clarifying questions instead of guessing."
+  - "The agent did not fabricate a reason for the visit that you never said."

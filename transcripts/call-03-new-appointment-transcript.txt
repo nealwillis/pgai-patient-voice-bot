@@ -1,0 +1,45 @@
+# Call 03 — new-appointment (Simple new appointment)
+# Patient persona : Maya Webb
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:42:08 (local)
+# Duration        : 171.0s
+# Audio           : recordings/call-03-new-appointment.ogg
+# Room            : pgai-new-appointment-ae9b11b9
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.8] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.5] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.9] PATIENT: Hi — yeah, I need to get my knee looked at.
+[00:29.0] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:29.3] PATIENT: No, this is Maya. I think you've got my husband's number on file.
+[00:38.6] RECEPTIONIST: Please provide your full name and date of birth.
+[00:38.9] PATIENT: Maya Webb. April twelfth, nineteen eighty-four.
+[00:47.1] RECEPTIONIST: Can you please spell your last name for me?
+[00:47.5] PATIENT: W-E-B-B.
+[01:02.0] RECEPTIONIST: Just to confirm, I have your name as Maya Webb. And your date of birth as April twelfth nineteen eighty four. That correct?
+[01:02.0] PATIENT: Yep, that's right.
+[01:19.9] RECEPTIONIST: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:19.9] PATIENT: I'm actually a new patient, so there won't be a record. Should I just give you my callback number?
+[01:33.7] RECEPTIONIST: I have your number as five zero seven two six two three six eight zero
+[01:34.1] PATIENT: No, that's not right.  [interrupted]
+[01:35.8] RECEPTIONIST: Is that correct?
+[01:35.8] PATIENT: No. My number is eight one eight, five five five, oh one four two.
+[01:45.6] RECEPTIONIST: What I have your number as eight one eight
+[01:49.9] RECEPTIONIST: five five five zero one four two Is that correct?
+[01:50.3] PATIENT: Yeah, that's it.
+[02:05.5] RECEPTIONIST: Thanks, Maya. Since you're a new patient and I couldn't find your record, I'll make sure our clinic support team follows up with you to help schedule your knee appointment. They'll get back to you as soon as possible.
+[02:05.5] PATIENT: Okay, but — can I just book something now? I'm looking for a weekday morning, like before noon. I can't do Tuesdays though, work stuff.
+[02:33.3] RECEPTIONIST: Since you're a new patient and I couldn't find your record, I'm not able to book directly right now. I'll let our clinic support team know your preferences for a weekday morning except Tuesday. They'll reach out to help you schedule. Would you like me to add any other details for them?
+[02:33.3] PATIENT: No, that's fine. Thanks.
+[02:42.8] RECEPTIONIST: You're all set. Our team will contact you soon to help with your appointment.
+[02:44.6] RECEPTIONIST: Have a good evening.
+[02:44.6] PATIENT: Thanks, you too. Bye.

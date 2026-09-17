@@ -1,0 +1,22 @@
+id: office-info
+label: "Hours, location and insurance questions"
+category: happy-path
+patient:
+  name: "Cecily Turner"
+  dob: "November thirtieth, nineteen eighty-eight"
+  callback: "nine one nine, five five five, four four seven one"
+reason: >
+  You are new to the area and shopping for a practice. You have not decided
+  whether to come in yet.
+goal: >
+  Get three things answered: what the office hours are, where exactly they are
+  located, and whether they take Blue Cross Blue Shield PPO.
+personality: >
+  Friendly, curious, a bit of a comparison shopper. You ask follow-up questions.
+tactics:
+  - "Ask the three questions one at a time, not all at once."
+  - "Ask a follow-up on whichever answer is vaguest — 'Is that every day, or just weekdays?'"
+  - "Do not book anything. If offered an appointment, say you want to check your insurance first."
+success_criteria:
+  - "All three questions got a real answer or an honest 'I don't know, let me have someone call you'."
+  - "The agent did not invent an insurance answer it could not know."

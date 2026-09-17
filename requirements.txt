@@ -1,0 +1,19 @@
+# Pinned: the livekit-agents 1.8.x agent API differs meaningfully from 1.5/1.6
+# (AgentServer + @server.rtc_session, TurnHandlingOptions). Do not float this
+# without re-reading the agent API.
+#
+# openai + elevenlabs are here so the documented provider swaps
+# (LLM_PROVIDER / TTS_PROVIDER in .env) actually work.
+livekit-agents[deepgram,cartesia,anthropic,silero,turn-detector,openai,elevenlabs]==1.8.2
+
+# Left unpinned so pip can satisfy livekit-agents' own constraints.
+livekit-api
+python-dotenv
+pyyaml
+anthropic        # analyze.py
+
+# These arrive transitively via livekit-agents, but our own code imports them
+# directly, so pin them explicitly rather than depend on someone else's tree:
+av               # src/pacing.py decodes the OGG recordings
+numpy            # src/pacing.py speech detection
+pydantic         # analyze.py structured output schema

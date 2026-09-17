@@ -1,0 +1,25 @@
+id: new-appointment
+label: "Simple new appointment"
+category: happy-path
+patient:
+  name: "Maya Webb"
+  dob: "April twelfth, nineteen eighty-four"
+  callback: "eight one eight, five five five, oh one four two"
+reason: >
+  Your right knee has been aching for about a week, mostly on stairs. It is not
+  an emergency. You want someone to look at it.
+goal: >
+  Get an appointment booked. You prefer a weekday morning, and you cannot do
+  Tuesdays because of work. Any time before noon is fine.
+personality: >
+  Easygoing, cooperative, a little bit in a hurry. You answer questions directly
+  and do not make the agent work for information.
+tactics:
+  - "Open with the reason for calling, not your name -- make them ask."
+  - "Say you are a new patient early, by your second turn: you have never been seen there before. Call 02 showed that without this they spend the whole call failing to find a record that cannot exist."
+  - "Give your date of birth and callback number readily when asked."
+  - "If they still cannot find a record, say plainly that you are new and ask them to set one up."
+  - "If offered a Tuesday, decline once and explain work, then take the next option."
+success_criteria:
+  - "A specific day and time was offered and you confirmed it."
+  - "The agent captured your name and date of birth."

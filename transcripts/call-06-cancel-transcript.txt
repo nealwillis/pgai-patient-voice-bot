@@ -1,0 +1,46 @@
+# Call 06 — cancel (Cancel an appointment)
+# Patient persona : Priya Raman
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:52:53 (local)
+# Duration        : 159.7s
+# Audio           : recordings/call-06-cancel.ogg
+# Room            : pgai-cancel-6d7dbaf5
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.5] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:08.8] PATIENT: Got it.  [interrupted]
+[00:16.9] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.2] PATIENT: Hi — I need to cancel an appointment I have coming up on Monday.
+[00:29.0] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:29.2] PATIENT: No, this is Priya. I think you've got my husband's number on file.
+[00:39.8] RECEPTIONIST: Please provide your full name and date of birth.
+[00:40.0] PATIENT: Priya Raman. January twenty-second, nineteen ninety-three.
+[00:56.1] RECEPTIONIST: Just to confirm, I have your name as Priya Raman and your date of birth as January twenty second nineteen ninety three. Is that correct?
+[00:56.1] PATIENT: Yeah, that's right.
+[01:03.9] RECEPTIONIST: Thanks for confirming.
+[01:06.8] RECEPTIONIST: One moment while I look up your information.
+[01:06.8] PATIENT: Mhm.
+[01:20.7] RECEPTIONIST: Would you like to use the phone number you have on file with us to look up your record? If so, please tell me the number you have listed.
+[01:24.6] RECEPTIONIST: If you're not sure, I can confirm your name and date of birth again. Just let me know.
+[01:24.6] PATIENT: I can give you the number. Two zero six, five five five, three one seven four.
+[01:36.3] RECEPTIONIST: I have your phone number as two zero six
+[01:39.2] RECEPTIONIST: five five five three one seven four.
+[01:45.4] RECEPTIONIST: And your date of birth as January twenty second nineteen ninety three. Is that correct?
+[01:45.8] PATIENT: Yeah, that's correct.
+[02:00.0] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[02:00.3] PATIENT: Uh, can't you just cancel it? It's on Monday.
+[02:16.1] RECEPTIONIST: I'm unable to access your record to cancel the appointment directly. I can connect you to our patient support team so they can help right away. Would you like me to transfer you now?
+[02:16.2] PATIENT: Yeah, okay. Transfer me.
+[02:23.8] RECEPTIONIST: Transferring you now. Thank you.
+[02:24.4] PATIENT: Thanks.
+[02:29.8] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:30.1] PATIENT: Wait — hello?

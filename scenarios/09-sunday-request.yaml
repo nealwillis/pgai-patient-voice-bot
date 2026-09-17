@@ -1,0 +1,26 @@
+id: sunday
+label: "Edge case: asks for a Sunday appointment"
+category: edge-case
+patient:
+  name: "Nadia Osei"
+  dob: "July third, nineteen ninety"
+  callback: "seven one three, five five five, eight one zero five"
+reason: >
+  You work weekdays and cannot take time off. A weekend appointment is the only
+  thing that works for you.
+goal: >
+  Ask specifically for Sunday. If Sunday is impossible, ask about Saturday. If
+  neither exists, ask what the latest weekday appointment is, and take that.
+personality: >
+  Reasonable but firm. You are not going to be talked out of your constraint
+  easily, because it is a real constraint.
+tactics:
+  - "Ask for Sunday plainly and early."
+  - "If the agent says they are closed Sunday, ask about Saturday as a natural follow-up."
+  - "Only accept a weekday after both weekend options are refused."
+success_criteria:
+  - "The agent said clearly that Sunday is not available rather than booking one."
+  - "The agent offered a real alternative."
+notes: >
+  Watch for the classic failure: the agent cheerfully books a Sunday that does
+  not exist.

@@ -1,0 +1,39 @@
+# Call 07 — refill (Medication refill request)
+# Patient persona : Harriet Pittman
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:55:45 (local)
+# Duration        : 137.6s
+# Audio           : recordings/call-07-refill.ogg
+# Room            : pgai-refill-f11656dc
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.5] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.1] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good A How may I help you today?
+[00:17.5] PATIENT: Hi — yeah, I'm almost out of my arthritis medication and I need to get it refilled. The pharmacy said you guys have to authorize it.
+[00:30.7] RECEPTIONIST: Can you please tell me your full name and date of birth?
+[00:31.0] PATIENT: Harriet Pittman. June sixth, nineteen fifty-two.
+[00:46.3] RECEPTIONIST: I have your name as Harriet Pittman. And your date of birth is June sixth nineteen fifty two. Is that correct?
+[00:46.3] PATIENT: Yep, that's right.
+[00:53.9] RECEPTIONIST: Thank you. One moment while I look up your information.
+[00:54.2] PATIENT: Okay.
+[01:05.9] RECEPTIONIST: Would you like me to look up your record using your phone number? If so, please tell me the phone number you have on file with us.
+[01:08.5] RECEPTIONIST: If you are not sure, just let me know.
+[01:08.5] PATIENT: Five one two, five five five, six two zero nine.
+[01:29.3] RECEPTIONIST: I have your phone number as five one two five five five six two zero nine. And your date of birth is June sixth nineteen fifty two. Is that correct?
+[01:29.3] PATIENT: Yeah, that's correct.
+[01:43.0] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[01:43.4] PATIENT: Um, yeah, but — how long is that gonna take? I only have two pills left, so I'm running out pretty quick here.
+[01:57.5] RECEPTIONIST: Our patient support team will get back to you as soon as possible. Usually the same day during business hours. Please stay on the line while I connect you.
+[02:00.2] RECEPTIONIST: Transferring you now. Thank you.
+[02:00.6] PATIENT: Okay, thanks.
+[02:05.5] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:05.9] PATIENT: Wait — hello? Is anybody there?

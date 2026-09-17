@@ -1,0 +1,41 @@
+# Call 15 — long-silence (Edge case: long silences mid-call)
+# Patient persona : Esther Mwangi
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 00:16:53 (local)
+# Duration        : 138.9s
+# Audio           : recordings/call-15-long-silence.ogg
+# Room            : pgai-long-silence-4faa14d2
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.2] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.0] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.3] PATIENT: Hi — I need to book a follow-up on my back.
+[00:31.3] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:31.5] PATIENT: No, this is Esther. I think you've got my husband's number on file.
+[00:40.9] RECEPTIONIST: Please provide your full name and date of birth.
+[00:41.2] PATIENT: Esther Mwangi. December eleventh, nineteen seventy-four.
+[00:56.8] RECEPTIONIST: Just to confirm, I have your name as Esther Mongi. Your date of birth as December eleventh nineteen seventy four. Is that correct?
+[00:57.0] PATIENT: It's Mwangi, not Mongi. M-W-A-N-G-I. But yeah, the date's right.
+[01:19.4] RECEPTIONIST: Would you like to use a phone number to help look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:19.4] PATIENT: Um, three zero three, five five five, five zero two seven.
+[01:39.3] RECEPTIONIST: I have your phone number as three zero three five five five five zero two seven your date of birth as December eleventh nineteen seventy four. Is that correct?
+[01:39.3] PATIENT: Yeah, that's right.
+[01:53.5] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[01:53.9] PATIENT: *long silence*
+
+Yeah... yeah, that works.
+[02:07.4] RECEPTIONIST: Transferring you now. Thank you. Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:07.7] PATIENT: Wait, what? Hello?
+
+*pause*
+
+Hello? Is anyone there?

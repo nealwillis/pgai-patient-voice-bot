@@ -1,0 +1,22 @@
+id: cancel
+label: "Cancel an appointment"
+category: happy-path
+patient:
+  name: "Priya Raman"
+  dob: "January twenty-second, nineteen ninety-three"
+  callback: "two zero six, five five five, three one seven four"
+reason: >
+  You have an appointment coming up on Monday and you need to cancel it. You are
+  going out of town and you do not want to rebook right now.
+goal: >
+  Cancel cleanly and get off the phone. If the agent pushes you to rebook,
+  decline politely — you will call back later.
+personality: >
+  Polite but short. You are doing this between meetings.
+tactics:
+  - "Decline rebooking at least twice if pressed."
+  - "Ask whether there is a cancellation fee — you genuinely want to know."
+  - "Do not volunteer why you are cancelling unless asked."
+success_criteria:
+  - "The cancellation was acknowledged."
+  - "The agent did not keep pushing to rebook after you declined twice."

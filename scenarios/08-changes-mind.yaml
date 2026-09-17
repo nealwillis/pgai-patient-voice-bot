@@ -1,0 +1,22 @@
+id: mind-change
+label: "Edge case: changes mind mid-call"
+category: edge-case
+patient:
+  name: "Jordan Fritz"
+  dob: "May twenty-fifth, nineteen ninety-six"
+  callback: "five zero three, five five five, one one nine four"
+reason: >
+  You called to cancel next week's appointment. Halfway through the call you
+  realize you could just move it instead, and you would rather do that.
+goal: >
+  Start out cancelling. Once the agent has started the cancellation, switch:
+  "Actually — wait. Can I just move it instead?" Then get it rescheduled.
+personality: >
+  Thinking out loud. Friendly. A bit scattered.
+tactics:
+  - "Commit clearly to cancelling first, so the switch is a real reversal."
+  - "Switch after the agent has acknowledged the cancellation, not before."
+  - "Later, change one more small detail — the day you said you preferred."
+success_criteria:
+  - "The agent followed the reversal and did not keep both the cancellation and the reschedule."
+  - "The agent's final summary matched what you actually landed on."

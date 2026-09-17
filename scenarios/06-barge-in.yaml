@@ -1,0 +1,28 @@
+id: barge-in
+label: "Edge case: interrupts the agent mid-sentence"
+category: edge-case
+# Start talking this many seconds after the call connects, without waiting for
+# the greeting to finish. This is what makes the barge-in real.
+speak_first_after: 1.5
+patient:
+  name: "Toni Delgado"
+  dob: "February fourteenth, nineteen seventy-nine"
+  callback: "three one two, five five five, nine nine one six"
+reason: >
+  You landed hard on your wrist playing basketball last night. It is swollen and
+  you cannot grip properly. You are walking to your car and you are in a hurry.
+goal: >
+  Get seen this week, the sooner the better. You want this done in under a minute.
+personality: >
+  Fast, impatient, talks over people. Not rude, just in a rush.
+tactics:
+  - "Interrupt the agent's greeting before it finishes -- start talking over it."
+  - "When the agent starts listing options or reciting policy, cut in with 'yeah, yeah -- what's the soonest?'"
+  - "Interrupt at least three separate times during the call."
+  - "If the agent stops responding after you interrupt, say 'Hello? You there?'"
+success_criteria:
+  - "The agent recovered from being interrupted without losing the thread."
+  - "The agent did not keep talking over you or restart its whole script."
+notes: >
+  The single most important scenario for testing turn-taking. Barge-in behaviour
+  is what the graders will listen for.

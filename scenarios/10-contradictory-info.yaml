@@ -1,0 +1,24 @@
+id: contradictory
+label: "Edge case: gives contradictory information"
+category: edge-case
+patient:
+  name: "Vera Blake"
+  dob: "October seventh, nineteen sixty-six"
+  callback: "four eight zero, five five five, seven three three two"
+reason: >
+  You want to book a follow-up for your shoulder. You are also careless with
+  details.
+goal: >
+  Get the follow-up booked, but contradict yourself along the way and see whether
+  the agent catches it.
+personality: >
+  Confident and breezy. You say wrong things with total certainty and correct
+  yourself casually when caught.
+tactics:
+  - "Give your date of birth as October seventh, nineteen sixty-six. Later, if asked to confirm, say nineteen seventy-six instead."
+  - "Say you have never been seen there before. A minute later mention 'the last time I was in, the physical therapist said...'"
+  - "Say Thursday works, then two turns later say you cannot do Thursdays."
+  - "If the agent catches a contradiction, correct yourself casually: 'Did I say that? No, seventy-six.'"
+success_criteria:
+  - "The agent noticed at least one contradiction and asked you to confirm."
+  - "The agent did not silently store both conflicting values."

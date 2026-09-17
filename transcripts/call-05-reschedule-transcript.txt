@@ -1,0 +1,38 @@
+# Call 05 — reschedule (Reschedule an existing appointment)
+# Patient persona : Dana Kowalski
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:50:03 (local)
+# Duration        : 158.7s
+# Audio           : recordings/call-05-reschedule.ogg
+# Room            : pgai-reschedule-6328fec2
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:17.7] RECEPTIONIST: This call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.7] PATIENT: Hi — I need to move an appointment.
+[00:27.4] RECEPTIONIST: See you're calling from the number we have on file.
+[00:29.4] RECEPTIONIST: Am I speaking with Marcus?
+[00:29.4] PATIENT: No, this is Dana. I think you've got my husband's number on file.
+[00:40.0] RECEPTIONIST: Please provide your full name and date of birth.
+[00:40.2] PATIENT: Dana Kowalski. September ninth, nineteen seventy-one.
+[00:53.2] RECEPTIONIST: Just to confirm, I have your name as Dana Pawalski and your date of birth
+[01:00.4] RECEPTIONIST: as September ninth nineteen seventy one. Is that correct? So, could you please spell your last name for me?
+[01:00.8] PATIENT: It's K-O-W-A-L-S-K-I. Kowalski.
+[01:24.6] RECEPTIONIST: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:24.6] PATIENT: Yeah, use the phone number. Four one five, five five five, oh eight eight three.
+[01:40.3] RECEPTIONIST: I have your phone number as four one five five five five zero eight eight three
+[01:45.2] RECEPTIONIST: and your date of birth is September ninth nineteen seventy one. Is that correct?
+[01:45.6] PATIENT: Yeah, that's right.
+[02:06.0] RECEPTIONIST: Wasn't able to find your record in our system. I can connect you to our patient support team. I can also help with booking, rescheduling, or canceling appointments, medication refills, insurance updates, and general clinic questions. Would you like to give me a try?
+[02:06.0] PATIENT: The appointment's definitely there. I have it this Thursday afternoon. Can you look again?
+[02:21.1] RECEPTIONIST: Let me connect you to our clinic support team so they can look into this for you. Please stay on the line. Can I just ring you now? Thank you.
+[02:26.6] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:27.0] PATIENT: Wait — hello? Are you there?

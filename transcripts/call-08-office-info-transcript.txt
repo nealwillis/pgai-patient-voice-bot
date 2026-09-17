@@ -1,0 +1,43 @@
+# Call 08 — office-info (Hours, location and insurance questions)
+# Patient persona : Cecily Turner
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:58:14 (local)
+# Duration        : 142.3s
+# Audio           : recordings/call-08-office-info.ogg
+# Room            : pgai-office-info-e1194cf4
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.5] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.2] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.6] PATIENT: Hi — yeah, I'm new to the area and I'm looking for an orthopedic practice. I wanted to ask you a few questions about your office.
+[00:28.6] RECEPTIONIST: Of course.
+[00:33.3] RECEPTIONIST: I'm happy to answer your questions about To The Point Orthopedics. What would you like to know?
+[00:33.6] PATIENT: Actually, I think you said Pivot Point before — is it Pivot Point or To The Point?
+[00:44.0] RECEPTIONIST: It's Pivot Point Orthopaedics.
+[00:46.8] RECEPTIONIST: Let me know what you'd like to ask about our clinic.
+[00:46.8] PATIENT: Okay, got it. So what are your office hours?
+[00:59.5] RECEPTIONIST: Our clinic is open Monday, Tuesday, and Thursday from nine AM to four PM, Wednesday from twelve PM to seven PM,
+[01:02.5] RECEPTIONIST: and Friday from nine AM to twelve PM.
+[01:04.7] RECEPTIONIST: Let me know if you have any other questions.
+[01:04.7] PATIENT: Is that every week, or does it change?
+[01:12.7] RECEPTIONIST: Those hours are the same every week.
+[01:15.9] RECEPTIONIST: He need to book or check an appointment. Just let me know.
+[01:16.4] PATIENT: Got it. And where exactly are you located?
+[01:32.5] RECEPTIONIST: We're at one two three four Recovery Way, suite two hundred, Austin. The clinic is in the Recovery Plaza Medical Building, If you need more details, just ask.
+[01:32.9] PATIENT: Okay, thanks. One more thing — do you take Blue Cross Blue Shield PPO?
+[01:51.7] RECEPTIONIST: Accept most insurance plans, including many Blue Cross Blue Shield PPO plans. If you'd like, I can help you check or update your insurance details. Would you like to do that now?
+[01:51.7] PATIENT: I want to check with my insurance first before I come in. But thanks for letting me know you take it.
+[02:02.1] RECEPTIONIST: No problem.
+[02:06.5] RECEPTIONIST: Do you have any other questions or want to schedule an appointment just let me know.
+[02:06.9] PATIENT: Nope, I think that's all I need for now. Thanks so much.
+[02:15.7] RECEPTIONIST: You're welcome. Have a great day.
+[02:16.0] PATIENT: You too, bye.

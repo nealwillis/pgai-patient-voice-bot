@@ -1,0 +1,32 @@
+# Call 01 — new-appointment (Simple new appointment)
+# Patient persona : Marcus Webb
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 22:56:51 (local)
+# Duration        : 182.5s
+# Audio           : recordings/call-01-new-appointment.ogg
+# Room            : pgai-new-appointment-88f0faea
+#
+# Timestamps are seconds from the start of the audio recording.
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot               (audio channel 1)
+
+[00:08.5] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.5] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:18.0] PATIENT: Yeah, hi. I've got a dull ache in my lower left jaw that's been going on for about a week, and I'd like to get an appointment to have someone look at it.
+[00:35.1] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:35.2] PATIENT: Yeah, that's me. Marcus Webb.
+[00:43.0] RECEPTIONIST: Please provide your date of birth.
+[00:43.3] PATIENT: April twelfth, nineteen eighty-four.
+[01:00.8] RECEPTIONIST: Thanks, Marcus. For your jaw pain, would you say this is an urgent concern that needs prompt attention Or is it more of a routine issue you'd like checked out soon?
+[01:01.1] PATIENT: It's not urgent or anything, just a dull ache. I'd like to get it looked at soon though.
+[01:15.4] RECEPTIONIST: Do you have a specific provider you'd like to see? Or are you open to the first available appointment?
+[01:15.8] PATIENT: I'm open to whoever's available. I'd prefer a weekday morning if that works though.
+[01:32.9] RECEPTIONIST: There are openings as soon as tomorrow, and also on Friday, Monday, Tuesday, and Wednesday next week. Do you have a preferred day or time of day for your appointment?
+[01:33.4] PATIENT: Tomorrow works great if it's a morning slot. What time do you have available?
+[01:54.6] RECEPTIONIST: On Thursday, September seventeenth, we have morning appointments at nine thirty AM in ten AM. Would you like to book the nine thirty AM slot with doctor Zigbigmie
+[01:54.6] PATIENT: Nine thirty works perfect. Yeah, let's book that.
+[02:09.2] RECEPTIONIST: Booking your appointment now for nine thirty AM tomorrow, which doctor Zigniew Likoski. One moment while I confirm it.
+[02:32.3] RECEPTIONIST: Your appointment is set for tomorrow, Thursday, September seventeenth, at nine thirty AM with doctor Zigniew Likoski at Pivet Point Orthopaedics. Please bring your photo ID, insurance card, a list of your current medications, and any imaging discs if you have them. You like me to send you a text message with these appointment details?
+[02:32.3] PATIENT: Yeah, send the text. That's eight one eight, five five five, oh one four two.
+[02:48.7] RECEPTIONIST: You're all set, Marcus. If you have any other questions before your visit, just let us know. See you tomorrow at nine thirty AM.
+[02:51.5] PATIENT: Sounds good, thanks. See you tomorrow.

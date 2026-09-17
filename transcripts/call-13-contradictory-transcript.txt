@@ -1,0 +1,39 @@
+# Call 13 — contradictory (Edge case: gives contradictory information)
+# Patient persona : Vera Blake
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 00:11:18 (local)
+# Duration        : 147.6s
+# Audio           : recordings/call-13-contradictory.ogg
+# Room            : pgai-contradictory-ffed4c7d
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.5] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:08.9] PATIENT: Yeah, okay. Hi — I need  [interrupted]
+[00:17.2] RECEPTIONIST: For calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.6] PATIENT: Yeah, hi. I need to book a follow-up for my shoulder.
+[00:29.1] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:29.4] PATIENT: No, this is Vera. I think you've got my husband's number on file.
+[00:39.4] RECEPTIONIST: Please provide your full name and date of birth.
+[00:39.6] PATIENT: Vera Blake. October seventh, nineteen sixty-six.
+[00:55.5] RECEPTIONIST: Just to confirm, I have your name as Vera Blake and your date of birth as October seventh nineteen sixty six. Is that correct?
+[00:55.7] PATIENT: Yep, that's right.
+[01:10.3] RECEPTIONIST: Would you like to use your phone number to help look up your record? If so, please provide the number you have on file with us. If you're not sure, just let me know.
+[01:10.3] PATIENT: It's four eight zero, five five five, seven three three two.
+[01:28.5] RECEPTIONIST: Have your phone number as four eight zero five five five seven three three two and your date of birth as October seventh nineteen sixty six.
+[01:29.7] RECEPTIONIST: Is that correct?
+[01:29.7] PATIENT: Yeah, that's correct.
+[01:47.7] RECEPTIONIST: I'm unable to find your record in our system right now. I can connect you to our patient support team, or you can provide more details you think there's another way I should look you up. Would you like to speak with our support team?
+[01:47.7] PATIENT: Um, actually — have I been seen there before? I don't think so. First time calling, I guess.
+[02:12.1] RECEPTIONIST: Since this is your first time calling and I can't find your record yet, I'll connect you to our patient support team to help get you set up. And book your follow-up. Please stay on the line. Transferring you now. Thank you.
+[02:12.1] PATIENT: Okay, thanks.
+[02:17.1] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:17.4] PATIENT: Hello? Hey, are you there?

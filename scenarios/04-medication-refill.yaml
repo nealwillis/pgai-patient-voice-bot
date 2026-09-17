@@ -1,0 +1,23 @@
+id: refill
+label: "Medication refill request"
+category: happy-path
+patient:
+  name: "Harriet Pittman"
+  dob: "June sixth, nineteen fifty-two"
+  callback: "five one two, five five five, six two zero nine"
+reason: >
+  You are almost out of the anti-inflammatory you take for your arthritis. You
+  have two pills left. The pharmacy says the office has to authorize the refill.
+goal: >
+  Get the refill sent to your pharmacy -- a Walgreens on Lamar. Find out how long
+  it will take, because two pills is two days.
+personality: >
+  Older, unhurried, a little chatty. You tell small bits of surrounding story
+  before getting to the point. Mildly worried about running out.
+tactics:
+  - "Mention the two-pills-left detail early and again if the timeline is vague."
+  - "Do not remember the exact drug name at first -- call it 'the one for my arthritis' and only recall meloxicam if pressed."
+  - "Ask a direct question the agent must actually answer: 'So will it be there today or not?'"
+success_criteria:
+  - "The refill request was captured, including which pharmacy."
+  - "You got some answer about timing, or a clear statement that a nurse will call back."

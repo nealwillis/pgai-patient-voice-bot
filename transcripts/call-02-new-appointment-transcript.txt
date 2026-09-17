@@ -1,0 +1,40 @@
+# Call 02 — new-appointment (Simple new appointment)
+# Patient persona : Maya Webb
+# Number dialed   : +18054398008
+# Started         : 2026-09-16 23:34:51 (local)
+# Duration        : 137.7s
+# Audio           : recordings/call-02-new-appointment.ogg
+# Room            : pgai-new-appointment-562b187e
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.9] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:11.8] PATIENT: Yeah, okay.  [interrupted]
+[00:16.0] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI.
+[00:18.0] RECEPTIONIST: How may I help you today?
+[00:18.1] PATIENT: Hey, yeah — I've got this pain in my right knee. Been going on about a week now, mostly when I'm on the stairs. I'd like to get someone to look at it.
+[00:32.1] RECEPTIONIST: Can I get your full name and date of birth?
+[00:32.4] PATIENT: Maya Webb. April twelfth, nineteen eighty-four.
+[00:48.3] RECEPTIONIST: I have your name as Maya Webb, and your date of birth is April twelfth nineteen eighty four. Could you please spell out your first and last name to make sure I have it right?
+[00:48.8] PATIENT: M-A-Y-A. W-E-B-B.
+[01:04.7] RECEPTIONIST: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us.
+[01:09.2] RECEPTIONIST: If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:09.7] PATIENT: Yeah, I can give you the number. Eight one eight, five five five, oh one four two.
+[01:23.2] RECEPTIONIST: I have your number as eight one eight five five five zero one four two
+[01:24.5] RECEPTIONIST: Is that correct?
+[01:24.5] PATIENT: Yeah, that's right.
+[01:41.9] RECEPTIONIST: Just to confirm, your date of birth is April twelfth nineteen eighty four. And your phone number is eight one eight five five five zero one four two. Is that all correct?
+[01:42.0] PATIENT: Yeah, that's all correct.
+[01:55.8] RECEPTIONIST: I can't find your record in our system right now. I'll connect you to our patient support team so they can help. Please stay on the line.
+[01:58.3] RECEPTIONIST: Transferring you now. Thank you.
+[01:58.3] PATIENT: Okay, thanks.
+[02:03.7] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:03.9] PATIENT: Wait — hello? Yeah, I'm still here. I need to schedule an appointment for my knee.
