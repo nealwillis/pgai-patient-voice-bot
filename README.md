@@ -11,7 +11,8 @@ STT, LLM and TTS, no speech-to-speech model, no hosted voice platform.
 - **Findings** in [`BUG_REPORT.md`](BUG_REPORT.md), generated then hand-reviewed
 - Design rationale in [`ARCHITECTURE.md`](ARCHITECTURE.md), iteration log in
   [`CHANGELOG.md`](CHANGELOG.md)
-- One-page diagram of the whole flow: [`docs/architecture.svg`](docs/architecture.svg)
+- Diagrams: [`docs/overview-simple.svg`](docs/overview-simple.svg) for a general
+  audience, [`docs/architecture.svg`](docs/architecture.svg) for the technical flow
 
 > **It only ever dials +1-805-439-8008.** The number is a hardcoded constant in
 > [`src/config.py`](src/config.py), not read from the environment and not

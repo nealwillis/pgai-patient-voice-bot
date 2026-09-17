@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1200 730" xmlns="http://www.w3.org/2000/svg"
+     font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="sl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="730" fill="#ffffff"/>
+
+  <text x="40" y="54" font-size="30" font-weight="700" fill="#0f172a">How we test their AI receptionist</text>
+  <text x="40" y="86" font-size="17" fill="#64748b">A pretend patient phones them, holds a normal conversation, and we listen for what goes wrong.</text>
+
+  <!-- ============ 1 ============ -->
+  <text x="40" y="132" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1.6">1 — WE MAKE THE CALL</text>
+
+  <rect x="40" y="146" width="250" height="116" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="62" y="176" font-size="17" font-weight="700" fill="#1e3a8a">We invent a patient</text>
+  <text x="62" y="202" font-size="14" fill="#334155">A name, a reason for calling,</text>
+  <text x="62" y="222" font-size="14" fill="#334155">and a personality.</text>
+  <text x="62" y="245" font-size="14" font-weight="600" fill="#2563eb">14 different ones.</text>
+
+  <line x1="292" y1="204" x2="320" y2="204" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="324" y="146" width="230" height="116" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="346" y="176" font-size="17" font-weight="700" fill="#1e3a8a">Our bot dials</text>
+  <text x="346" y="202" font-size="14" fill="#334155">One real phone call,</text>
+  <text x="346" y="222" font-size="14" fill="#334155">always to the same</text>
+  <text x="346" y="242" font-size="14" fill="#334155">number.</text>
+
+  <line x1="556" y1="204" x2="584" y2="204" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="588" y="146" width="176" height="116" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="676" y="192" font-size="17" font-weight="700" fill="#92400e" text-anchor="middle">An ordinary</text>
+  <text x="676" y="215" font-size="17" font-weight="700" fill="#92400e" text-anchor="middle">phone call</text>
+  <text x="676" y="240" font-size="13" fill="#b45309" text-anchor="middle">nothing special</text>
+
+  <line x1="766" y1="204" x2="794" y2="204" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="798" y="146" width="290" height="116" rx="12" fill="#fff1f2" stroke="#fb7185" stroke-width="2"/>
+  <text x="820" y="176" font-size="17" font-weight="700" fill="#9f1239">Their AI receptionist answers</text>
+  <text x="820" y="204" font-size="14" fill="#be123c">This is the only part we did not</text>
+  <text x="820" y="224" font-size="14" fill="#be123c">build. It is the thing being tested.</text>
+  <text x="820" y="248" font-size="13" fill="#9f1239" font-style="italic">Everything else on this page is ours.</text>
+
+  <!-- ============ 2 ============ -->
+  <text x="40" y="310" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1.6">2 — WHAT HAPPENS WHILE THEY TALK</text>
+
+  <rect x="118" y="324" width="286" height="112" rx="12" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+  <text x="261" y="356" font-size="17" font-weight="700" fill="#0e7490" text-anchor="middle">It listens</text>
+  <text x="261" y="384" font-size="14" fill="#155e75" text-anchor="middle">and turns what it hears</text>
+  <text x="261" y="404" font-size="14" fill="#155e75" text-anchor="middle">into words</text>
+
+  <line x1="408" y1="380" x2="440" y2="380" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="444" y="324" width="286" height="112" rx="12" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+  <text x="587" y="356" font-size="17" font-weight="700" fill="#0e7490" text-anchor="middle">It thinks</text>
+  <text x="587" y="384" font-size="14" fill="#155e75" text-anchor="middle">about what a real patient</text>
+  <text x="587" y="404" font-size="14" fill="#155e75" text-anchor="middle">would say next</text>
+
+  <line x1="734" y1="380" x2="766" y2="380" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="770" y="324" width="286" height="112" rx="12" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+  <text x="913" y="356" font-size="17" font-weight="700" fill="#0e7490" text-anchor="middle">It speaks</text>
+  <text x="913" y="384" font-size="14" fill="#155e75" text-anchor="middle">out loud, in a voice that</text>
+  <text x="913" y="404" font-size="14" fill="#155e75" text-anchor="middle">sounds like a person</text>
+
+  <path d="M913 440 L913 466 L261 466 L261 440" fill="none" stroke="#0891b2" stroke-width="1.8" marker-end="url(#sl)"/>
+  <text x="587" y="460" font-size="13" fill="#0891b2" text-anchor="middle">round and round, about twenty times a call</text>
+
+  <text x="118" y="500" font-size="14.5" fill="#334155">The hard part is the timing: knowing when to wait, when it is your turn, when to cut in — and when to say goodbye and hang up.</text>
+
+  <!-- ============ 3 ============ -->
+  <text x="40" y="548" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1.6">3 — WHAT WE END UP WITH</text>
+
+  <rect x="40" y="562" width="336" height="116" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="62" y="592" font-size="17" font-weight="700" fill="#065f46">A recording of every call</text>
+  <text x="62" y="618" font-size="14" fill="#047857">Their voice on one side, ours on the</text>
+  <text x="62" y="638" font-size="14" fill="#047857">other — so you can hear exactly who</text>
+  <text x="62" y="658" font-size="14" fill="#047857">talked over whom.</text>
+
+  <line x1="378" y1="620" x2="406" y2="620" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="410" y="562" width="286" height="116" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="432" y="592" font-size="17" font-weight="700" fill="#065f46">And a written copy</text>
+  <text x="432" y="618" font-size="14" fill="#047857">Every word, with the time</text>
+  <text x="432" y="638" font-size="14" fill="#047857">it was said, so anything</text>
+  <text x="432" y="658" font-size="14" fill="#047857">can be checked.</text>
+
+  <line x1="698" y1="620" x2="726" y2="620" stroke="#64748b" stroke-width="1.8" marker-end="url(#s)"/>
+
+  <rect x="730" y="562" width="358" height="116" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="752" y="592" font-size="17" font-weight="700" fill="#0f172a">A list of what went wrong</text>
+  <text x="752" y="618" font-size="14" fill="#334155">Read back through every call, worst</text>
+  <text x="752" y="638" font-size="14" fill="#334155">problems first, each one quoting the</text>
+  <text x="752" y="658" font-size="14" fill="#334155">moment it happened.</text>
+
+  <text x="40" y="712" font-size="13.5" fill="#64748b">18 calls · two to three minutes each · about a dollar of phone time</text>
+</svg>
