@@ -66,6 +66,10 @@ TTS_PROVIDER = env("TTS_PROVIDER", "cartesia")
 TURN_DETECTOR = env("TURN_DETECTOR", "inference")  # "inference" | "local"
 
 ANTHROPIC_MODEL = env("ANTHROPIC_MODEL", "claude-haiku-4-5")
+# Prompt caching. The system prompt is ~5.3k characters and identical on every
+# turn of a call, which is exactly the shape caching exists for. Measured LLM
+# time-to-first-token was 1.59s without it -- ~70% of the whole response budget.
+LLM_CACHING = env("LLM_CACHING", "1") not in {"0", "false", "no"}
 OPENAI_MODEL = env("OPENAI_MODEL", "gpt-4o-mini")
 CARTESIA_MODEL = env("CARTESIA_MODEL", "sonic-3")
 # Deepgram model id. Direct: "nova-3". Via LiveKit: "deepgram/nova-3".
@@ -76,10 +80,18 @@ DEEPGRAM_MODEL = env("DEEPGRAM_MODEL", "nova-3")
 # Deliberately surfaced as env vars so we can tune pacing between calls
 # without editing code. Defaults are the starting point, not the answer.
 ENDPOINTING_MIN_DELAY = float(env("ENDPOINTING_MIN_DELAY", "0.25"))
+# Endpointing mode: "fixed" waits a constant delay; "dynamic" keeps a moving
+# average of the far end's pacing and adapts.
+ENDPOINTING_MODE = env("ENDPOINTING_MODE", "fixed")
 # The ceiling when the turn detector is unsure the far end has finished. At 3.0s
 # this was the source of the intermittent long waits heard on call 01 -- most
 # replies were fast, but an uncertain endpoint stalled the full three seconds.
 ENDPOINTING_MAX_DELAY = float(env("ENDPOINTING_MAX_DELAY", "2.0"))
+# How much silence Silero needs before it reports end-of-speech. This is the real
+# floor on every reply: ENDPOINTING_MIN_DELAY is back-dated to when they last
+# spoke, so it cannot bite below this number. Silero's own default is 0.55s and
+# we shipped that untouched. The turn detector's hard minimum is 0.25s.
+VAD_MIN_SILENCE = float(env("VAD_MIN_SILENCE", "0.30"))
 INTERRUPTION_MIN_DURATION = float(env("INTERRUPTION_MIN_DURATION", "0.4"))
 INTERRUPTION_MIN_WORDS = int(env("INTERRUPTION_MIN_WORDS", "2"))
 # Start generating (and speaking) before the turn is confirmed. Cuts perceived

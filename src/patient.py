@@ -30,17 +30,25 @@ from livekit.agents import (
     get_job_context,
     inference,
 )
-from livekit.plugins import anthropic, cartesia, deepgram, silero
+# All plugins must be imported here, on the main thread. LiveKit registers a
+# plugin at import time and rejects registration from a job thread, so a lazy
+# `from livekit.plugins import openai` inside a builder raises
+# "Plugins must be registered on the main thread" only on a real call -- which
+# is why preflight, running on the main thread, could not catch it.
+from livekit.plugins import anthropic, cartesia, deepgram, elevenlabs, openai, silero
 
 from .artifacts import save_artifacts
+from .latency import LatencyLog
 from .config import (
     ANTHROPIC_MODEL,
     CARTESIA_MODEL,
     DEEPGRAM_MODEL,
     ENDPOINTING_MAX_DELAY,
+    ENDPOINTING_MODE,
     ENDPOINTING_MIN_DELAY,
     INTERRUPTION_MIN_DURATION,
     INTERRUPTION_MIN_WORDS,
+    LLM_CACHING,
     LLM_PROVIDER,
     MAX_CALL_SECONDS,
     OPENAI_MODEL,
@@ -49,6 +57,7 @@ from .config import (
     TARGET_NUMBER,
     TTS_PROVIDER,
     TURN_DETECTOR,
+    VAD_MIN_SILENCE,
     assert_allowed_number,
     env,
     require_env,
@@ -87,19 +96,18 @@ def _build_stt(scenario: Scenario | None = None):
 
 def _build_llm():
     if LLM_PROVIDER == "openai":
-        from livekit.plugins import openai
-
         return openai.LLM(model=OPENAI_MODEL, temperature=0.8)
     # max_tokens is a hard brake on rambling: a real caller says one or two
     # sentences, and a long turn is the clearest tell that a bot is talking.
-    return anthropic.LLM(model=ANTHROPIC_MODEL, temperature=0.9, max_tokens=60)
+    kwargs = {"model": ANTHROPIC_MODEL, "temperature": 0.9, "max_tokens": 60}
+    if LLM_CACHING:
+        kwargs["caching"] = "ephemeral"
+    return anthropic.LLM(**kwargs)
 
 
 def _build_tts(scenario: Scenario | None = None):
     override = (scenario.voice if scenario else None) or ""
     if TTS_PROVIDER == "elevenlabs":
-        from livekit.plugins import elevenlabs
-
         return elevenlabs.TTS(
             voice_id=override or require_env("ELEVENLABS_VOICE_ID"),
             model="eleven_flash_v2_5",
@@ -134,10 +142,11 @@ def build_session(scenario: Scenario, vad=None) -> AgentSession:
         stt=_build_stt(scenario),
         llm=_build_llm(),
         tts=_build_tts(scenario),
-        vad=vad or silero.VAD.load(),
+        vad=vad or silero.VAD.load(min_silence_duration=VAD_MIN_SILENCE),
         turn_handling=TurnHandlingOptions(
             turn_detection=_build_turn_detection(),
             endpointing={
+                "mode": ENDPOINTING_MODE,
                 "min_delay": ENDPOINTING_MIN_DELAY,
                 "max_delay": ENDPOINTING_MAX_DELAY,
             },
@@ -188,7 +197,7 @@ class Patient(Agent):
 
 def prewarm(proc: JobProcess) -> None:
     """Load the VAD once per worker process, not once per call."""
-    proc.userdata["vad"] = silero.VAD.load()
+    proc.userdata["vad"] = silero.VAD.load(min_silence_duration=VAD_MIN_SILENCE)
 
 
 # num_idle_processes: the production default is 14, which on a laptop spawns 14
@@ -201,7 +210,18 @@ def prewarm(proc: JobProcess) -> None:
 # parent was killed -- the next worker dies at startup with WinError 10048 before
 # it can register, which cost us a scenario. 0 lets the OS pick a free port, so
 # back-to-back runs and stale workers can never collide.
-server = AgentServer(setup_fnc=prewarm, num_idle_processes=1, port=0)
+#
+# load_threshold: in production mode the worker marks itself unavailable above
+# 0.7 CPU load, which is right for autoscaling a fleet and wrong for a laptop
+# placing one call at a time. On a machine running anything else it flaps in and
+# out of capacity mid-call -- 17 times in one observed run -- and the call never
+# completes. Dev mode uses inf for exactly this reason; we want the same.
+server = AgentServer(
+    setup_fnc=prewarm,
+    num_idle_processes=1,
+    port=0,
+    load_threshold=float("inf"),
+)
 
 
 @server.rtc_session(agent_name=AGENT_NAME)
@@ -221,9 +241,11 @@ async def patient_session(ctx: JobContext) -> None:
         scenario.id,
         scenario.name,
         STT_PROVIDER,
-        LLM_PROVIDER,
+        LLM_CACHING,
+    LLM_PROVIDER,
         TTS_PROVIDER,
         TURN_DETECTOR,
+    VAD_MIN_SILENCE,
     )
 
     session = build_session(scenario, vad=ctx.proc.userdata["vad"])
@@ -239,7 +261,9 @@ async def patient_session(ctx: JobContext) -> None:
         if saved:
             return
         try:
-            save_artifacts(ctx.make_session_report(session), scenario, call_index)
+            save_artifacts(
+                ctx.make_session_report(session), scenario, call_index, latency=latency
+            )
             saved = True
         except Exception:
             logger.exception("failed to save artifacts for call %02d", call_index)
@@ -248,6 +272,9 @@ async def patient_session(ctx: JobContext) -> None:
 
     # Set either by the patient's end_call tool or by the session closing
     # (which is how a call ends when the *far end* hangs up first).
+    latency = LatencyLog()
+    session.on("metrics_collected", lambda ev: latency.record(ev.metrics))
+
     call_over = asyncio.Event()
     session.on("close", lambda _ev: call_over.set())
 

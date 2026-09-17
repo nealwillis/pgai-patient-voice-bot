@@ -1,0 +1,42 @@
+# Call 21 — office-info (Hours, location and insurance questions)
+# Patient persona : Cecily Turner
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:05:05 (local)
+# Duration        : 157.7s
+# Audio           : recordings/call-21-office-info.ogg
+# Room            : pgai-office-info-210adb4c
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:21.7] RECEPTIONIST: This call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:22.8] PATIENT: Hi — yeah, I'm new to the area and looking for a practice. I had a quick question about your office.
+[00:44.6] RECEPTIONIST: Welcome to the area.
+[00:44.9] RECEPTIONIST: I'm happy to help.
+[00:45.6] RECEPTIONIST: What would you like to know about our office?
+[00:45.7] PATIENT: Thanks. Um, what are  [interrupted]
+[00:53.3] RECEPTIONIST: Welcome. What would you like to know about
+[00:53.8] PATIENT: Sorry, yeah — what  [interrupted]
+[00:58.8] RECEPTIONIST: Sure. What would you like to ask?
+[00:59.1] PATIENT: What are your office hours?
+[01:02.9] RECEPTIONIST: No problem.
+[01:04.8] RECEPTIONIST: What
+[01:09.4] RECEPTIONIST: Our clinic is open Monday, Tuesday, and Thursday
+[01:15.2] RECEPTIONIST: from nine AM to four PM. Wednesday from twelve PM to seven PM, and Friday from nine AM to twelve PM.
+[01:17.7] RECEPTIONIST: Let me know if you have any other questions.
+[01:17.8] PATIENT: Okay, so — is that every week? Or do you close on certain days?
+[01:39.2] RECEPTIONIST: Those hours are the same every week. We're open Monday through Friday and closed on weekends. He need to check for holiday closures or a specific date just let me know.
+[01:39.3] PATIENT: Got it. And where are you guys located?
+[01:55.7] RECEPTIONIST: We're located at one two three four Recovery Way, suite two hundred. Austin. If you need directions or more details, just ask.
+[01:55.8] PATIENT: Okay, cool. And do you take Blue Cross Blue Shield PPO?
+[02:12.0] RECEPTIONIST: Yes. We accept most insurance plans including Blue Cross Blue Shield PPO. If you'd like to confirm your specific coverage or have more insurance questions, I can help with that too.
+[02:12.3] PATIENT: Great, that's helpful. I think I'm good for now — I want to check with my insurance first before I come in.
+[02:31.4] RECEPTIONIST: Sounds like a good plan. If you have more questions or want to schedule an appointment later, just give us a call. Have a great day.
+[02:31.4] PATIENT: Thanks, you too. Bye.

@@ -1,0 +1,38 @@
+# Call 24 — mind-change (Edge case: changes mind mid-call)
+# Patient persona : Jordan Fritz
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:14:58 (local)
+# Duration        : 160.5s
+# Audio           : recordings/call-24-mind-change.ogg
+# Room            : pgai-mind-change-4577be73
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:09.0] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:18.0] RECEPTIONIST: Thanks for calling Pivot Point Orthopedics. Part of Pretty Good AI. How may I help you today?
+[00:18.3] PATIENT: Hi — yeah, I need to cancel my appointment next week.
+[00:30.7] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:30.9] PATIENT: No, this is Jordan. I think you've got my husband's number on file.
+[00:41.8] RECEPTIONIST: Please provide your full name and date of birth.
+[00:42.0] PATIENT: Jordan Fritz. May twenty-fifth, nineteen ninety-six.
+[01:02.8] RECEPTIONIST: Just to confirm, I have your name as Jordan Fritz, and your date of birth as May twenty fifth nineteen ninety six. Is that correct? If so, could you please spell your first and last name for me?
+[01:02.8] PATIENT: Yeah, that's right. J-O-R-D-A-N, F-R-I-T-Z.
+[01:16.3] RECEPTIONIST: Thanks for spelling that. Could you also confirm your date of birth one more time?
+[01:16.7] PATIENT: May twenty-fifth, nineteen ninety-six.
+[01:30.5] RECEPTIONIST: I have your phone number as five zero seven
+[01:39.6] RECEPTIONIST: two six two three six eight zero and your date of birth as May twenty fifth nineteen ninety six. Is that correct?
+[01:39.7] PATIENT: No, the phone number's wrong. It's five zero three, five five five, one one nine four.
+[01:59.5] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. You like me to connect you to our patient support team?
+[01:59.9] PATIENT: Um, yeah. Actually — can you just look up my appointment? It's next week. I need to cancel it.
+[02:21.9] RECEPTIONIST: I'm unable to access your records right now, so I can't look up or cancel your appointment directly. I'll connect you to our patient support team so they can help you with this. Please stay on the line.
+[02:24.3] RECEPTIONIST: Transferring you now. Thank you.
+[02:29.3] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:29.7] PATIENT: Hello? Hey, are you there?

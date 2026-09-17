@@ -1,0 +1,55 @@
+# Call 33 — new-appointment (Simple new appointment)
+# Patient persona : Maya Webb
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 14:07:12 (local)
+# Duration        : 161.6s
+# Audio           : recordings/call-33-new-appointment.ogg
+# Room            : pgai-new-appointment-07ac1a23
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:12.9] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:13.1] PATIENT: Hi — yeah, I need  [interrupted]
+[00:18.4] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics.
+[00:20.6] RECEPTIONIST: Part of Pretty Good AI.
+[00:22.0] RECEPTIONIST: How may I help you today?
+[00:22.0] PATIENT: I need to get my knee looked at.
+[00:33.0] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:34.8] PATIENT: No, this is Maya.
+[00:45.2] RECEPTIONIST: Please provide your full name and date of birth.
+[00:45.4] PATIENT: Maya Webb. April twelfth, eighty-four.
+[00:56.2] RECEPTIONIST: Can you please confirm your full last name and the year of your birth?
+[00:57.2] PATIENT: Webb. Nineteen eighty-four.
+[01:13.5] RECEPTIONIST: Thank you. Me look up your information. Thank you. Just to confirm, your name is Maya Webb? And your date of birth is April twelfth nineteen eighty four? Is that correct?
+[01:13.5] PATIENT: Yeah, that's correct. But I'm a new patient.
+[01:24.4] RECEPTIONIST: For letting me know. I'll get you set up as a new patient.
+[01:26.6] RECEPTIONIST: One moment while I pull up the next steps.
+[01:31.0] RECEPTIONIST: For letting me know. Since you're a new patient, I'll note that for your visit.
+[01:36.1] RECEPTIONIST: What is your full legal name and date of birth spelled out letter by letter for your last name?
+[01:36.1] PATIENT: It's Maya Webb. W-E-B-B. April twelfth, nineteen eighty-four.
+[01:51.5] RECEPTIONIST: I have your name as Maya Webb. Date of birth, April twelfth nineteen eighty four.
+[01:59.1] RECEPTIONIST: And your phone number is five zero seven two six two three six eight zero Is all of that correct?
+[01:59.2] PATIENT: No, that's not my number. It's eight one eight, five five five, oh one four two.
+[02:22.8] RECEPTIONIST: I wasn't able to find your information in our system. I'll connect you to our patient support team so they can help you get started as a new patient. Please stay on the line.
+[02:25.9] RECEPTIONIST: Transferring you now. Thank you.
+[02:30.0] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:30.8] PATIENT: Sorry, what was that?
+
+# Where the pause before each of our replies went
+# (measured by the framework per turn, not inferred from the text)
+#
+#   stage                        n   median      mean       max
+#   waiting for them to finish  17     0.58s     0.70s     2.00s
+#   final transcript arriving   17     0.21s     0.26s     0.45s
+#   LLM first token             26     0.85s     0.94s     2.49s
+#   TTS first audio byte        19     0.17s     0.19s     0.38s
+#   sum of medians                     1.82s
+#   discarded preemptive work: 1 LLM, 0 TTS

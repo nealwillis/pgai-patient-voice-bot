@@ -1,0 +1,40 @@
+# Call 22 — barge-in (Edge case: interrupts the agent mid-sentence)
+# Patient persona : Toni Delgado
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:07:54 (local)
+# Duration        : 175.4s
+# Audio           : recordings/call-22-barge-in.ogg
+# Room            : pgai-barge-in-89593ca3
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:02.3] PATIENT: Hi — I landed on  [interrupted]
+[00:08.9] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:18.0] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:18.3] PATIENT: Yeah, I hurt my wrist playing basketball last night. Need to get it looked at this week.
+[00:30.7] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:30.9] PATIENT: No, this is Toni. I think you've got my husband's number on file.
+[00:41.3] RECEPTIONIST: Please provide your full name and date of birth.
+[00:41.8] PATIENT: Toni Delgado. February fourteenth, nineteen seventy-nine.
+[00:58.0] RECEPTIONIST: Just to confirm, can you please spell your first and last name for me?
+[00:58.4] PATIENT: T-O-N-I, D-E-L-G-A-D-O.
+[01:21.0] RECEPTIONIST: Would you like to use a phone number to look up your record? If so, please provide the number you have on file with us. You're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:21.2] PATIENT: Yeah, yeah — look, can we just get to the soonest appointment? My wrist is swollen, I can't grip anything.
+[01:41.7] RECEPTIONIST: I understand you're in pain, To help you as quickly as possible, I need to confirm your information. Could you please spell your first and last name for me one more time and confirm your date of birth?
+[01:41.7] PATIENT: Already did that. Toni Delgado, February fourteenth, nineteen seventy-nine. What's the soonest you got?
+[02:02.0] RECEPTIONIST: I wasn't able to find your record in our system. I can have our clinic support team follow-up with you to get this sorted out. Would you like me to document your request so they can reach out as soon as possible?
+[02:02.1] PATIENT: What? No, I don't have time for that. Can't you just book me an appointment? I need to see someone this week.
+[02:26.3] RECEPTIONIST: I'm not able to book an appointment without your record in our system. The fastest way to help is to have our clinic support team contact you directly Would you like me to let them know to reach out to you as soon as possible?
+[02:26.3] PATIENT: Fine. Yeah, okay. Have them call me back at three one two, five five five, nine nine one six. How soon are we talking?
+[02:39.3] RECEPTIONIST: Transferring you now. Thank you.
+[02:40.1] PATIENT: Wait — hello? You there?
+[02:44.7] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:45.1] PATIENT: Yeah, okay. Thanks.

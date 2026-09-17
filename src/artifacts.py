@@ -93,7 +93,7 @@ def render_transcript(report, scenario, index: int, audio_name: str | None) -> s
     return "\n".join(head + lines) + "\n"
 
 
-def save_artifacts(report, scenario, index: int) -> dict[str, Path | None]:
+def save_artifacts(report, scenario, index: int, latency=None) -> dict[str, Path | None]:
     """Copy the audio and write the transcript. Returns what actually landed."""
     RECORDINGS_DIR.mkdir(parents=True, exist_ok=True)
     TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -111,9 +111,15 @@ def save_artifacts(report, scenario, index: int) -> dict[str, Path | None]:
 
     transcript_dest = TRANSCRIPTS_DIR / f"{stem}-transcript.txt"
     rel_audio = f"recordings/{audio_dest.name}" if audio_dest else None
-    transcript_dest.write_text(
-        render_transcript(report, scenario, index, rel_audio), encoding="utf-8"
-    )
+    body = render_transcript(report, scenario, index, rel_audio)
+    if latency is not None:
+        measured = "\n".join("# " + ln for ln in latency.summary().splitlines())
+        body += (
+            "\n# Where the pause before each of our replies went\n"
+            "# (measured by the framework per turn, not inferred from the text)\n"
+            "#\n" + measured + "\n"
+        )
+    transcript_dest.write_text(body, encoding="utf-8")
     logger.info("saved transcript -> %s", transcript_dest)
 
     return {"audio": audio_dest, "transcript": transcript_dest}

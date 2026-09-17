@@ -93,6 +93,43 @@ That module exists because inferring pacing from transcript timestamps gave a
 wrong answer early on — the timestamps mark when a reply was generated, not when
 audio reached the line.
 
+## What I'd do next
+
+These are known gaps, listed so they are not mistaken for oversights.
+
+**Expressive mode.** `AgentSession(expressive=...)` lets the framework inject TTS
+markup into the LLM so speech can carry real breaths, sighs, hesitations and a
+per-persona pace; we left it at the default `False`, so our patient's disfluencies
+exist only as written words rather than as sounds. It is the single largest
+remaining realism lever, and the reason it is not already on is that it adds LLM
+output tokens, which pulls against the latency work described above.
+
+**Background ambience.** `BackgroundAudioPlayer` ships clips such as
+`CITY_AMBIENCE` and `OFFICE_AMBIENCE`, and a real patient phones from a car or a
+kitchen rather than from silence — dead air behind a voice is one of the stronger
+tells that a call is synthetic. It would also double as a test of the
+receptionist's noise robustness, which pairs naturally with the accent coverage.
+
+**Backchannels.** Their receptionist speaks for fifteen to twenty seconds at a
+stretch and our patient stays completely silent throughout, where a real caller
+would drop an "mhm" or "okay" partway through. The framework already distinguishes
+a backchannel from an interruption (`InterruptionOptions.backchannel_boundary`),
+so the machinery exists; this is a conversational-design gap rather than a missing
+knob, and to my ear it is the most audible remaining artificiality.
+
+**Barge-in only fires once.** The `barge-in` scenario asks the patient to interrupt
+at least three times, but only the scripted opening interruption
+(`speak_first_after`) actually happens — measured on call 09, exactly one
+patient-initiated overlap. After that the agent can only speak when the turn
+detector yields the floor, so repeated interruption is structurally impossible
+without driving speech independently of turn-taking.
+
+**Long silence isn't really silent.** The `long-silence` scenario is prompt-driven
+only: the patient is told to go quiet, but the framework replies as soon as a turn
+is detected, so the measured maximum pause was 4.6s against 2.6s on an ordinary
+call — a hint rather than the dead air the scenario describes. Testing it properly
+needs an explicit delay hook that withholds the reply, not an instruction.
+
 ## Alternatives considered
 
 | Instead of | We could have | Why not |

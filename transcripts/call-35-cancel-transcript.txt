@@ -1,0 +1,43 @@
+# Call 35 — cancel (Cancel an appointment)
+# Patient persona : Priya Raman
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 12:58:28 (local)
+# Duration        : 183.1s
+# Audio           : recordings/call-19-cancel.ogg
+# Room            : pgai-cancel-5076a06b
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.4] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:08.7] PATIENT: Mhm, okay.
+[00:16.8] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.1] PATIENT: Hi — I need to cancel an appointment I have coming up on Monday.
+[00:30.4] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:30.5] PATIENT: No, this is Priya. I think you've got my husband's number on file.
+[00:42.5] RECEPTIONIST: Please provide your full name and date of birth.
+[00:45.5] PATIENT: Priya Raman. January twenty-second, nineteen ninety-three.
+[01:01.5] RECEPTIONIST: Could you please spell your last name for me to make sure I have it right?
+[01:03.4] RECEPTIONIST: I have your date of birth as January twenty second nineteen ninety three.
+[01:04.3] PATIENT: R-A-M-A-N. And yeah, that's  [interrupted]
+[01:13.8] RECEPTIONIST: Could you please spell your last name for me?
+[01:14.7] PATIENT: R-A-M-A-N.
+[01:36.0] RECEPTIONIST: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:36.0] PATIENT: Yeah, use the phone number. Two  [interrupted]
+[01:49.2] RECEPTIONIST: Would you like to
+[01:52.8] RECEPTIONIST: Please tell me the
+[01:56.9] RECEPTIONIST: Could you please provide the phone number you have on file with us?
+[01:58.4] PATIENT: Two zero six, five five five, three one seven four.
+[02:20.7] RECEPTIONIST: I have your phone number as two zero six five five five three one seven four and your date of birth as January twenty second nineteen ninety three. Is that correct?
+[02:20.8] PATIENT: Yeah, that's right.
+[02:36.3] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[02:37.4] PATIENT: Um, can't you just cancel it? It's for Monday.
+[02:56.4] RECEPTIONIST: I'm unable to access your record to cancel the appointment directly. I can connect you to our patient support team now. So they can help you right away. Would you like me to transfer you?
+[02:56.6] PATIENT: Yeah, okay. Go ahead.

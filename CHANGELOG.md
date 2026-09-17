@@ -2,6 +2,19 @@
 
 What changed, and why. Newest first.
 
+## The "before" recording
+
+**`recordings/extra/call-01-new-appointment.ogg` is the pre-tuning baseline** and
+is kept deliberately as the before-and-after pair. It is the first call this
+project ever placed, and it is the worst one: a thirty-three word paragraph for an
+opener, 2.8s median response latency and a 5.2s worst-case pause. It lives in
+`extra/` rather than alongside the featured calls precisely so that a reviewer
+does not land on it first.
+
+Compare it against any call in `recordings/` for the difference the tuning made —
+openers down to one short sentence, and the latency budget measured stage by
+stage. The reasoning behind each change is in the Phase 2 entries below.
+
 ---
 
 ## Phase 4 — accents and a non-English caller

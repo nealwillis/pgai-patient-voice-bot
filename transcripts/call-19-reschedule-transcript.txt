@@ -1,0 +1,41 @@
+# Call 19 — reschedule (Reschedule an existing appointment)
+# Patient persona : Dana Kowalski
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 12:58:23 (local)
+# Duration        : 181.8s
+# Audio           : recordings/call-19-reschedule.ogg
+# Room            : pgai-reschedule-5f08b23e
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.7] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:17.2] RECEPTIONIST: For calling Pivot Point Orthopedics. Part of Pretty Good AI. How may I help you today?
+[00:17.6] PATIENT: Hi — I need to move an appointment.
+[00:28.0] RECEPTIONIST: I see you're calling from the number we have on file. Am I speaking with Marcus?
+[00:28.3] PATIENT: No, this is Dana. I think you've got my husband's number on file.
+[00:38.0] RECEPTIONIST: Please provide your full name and date of birth.
+[00:38.2] PATIENT: Dana Kowalski. September ninth, nineteen seventy-one.
+[00:59.2] RECEPTIONIST: Can you also tell me your last name?
+[01:10.2] RECEPTIONIST: I need your last name as well to look up your
+[01:13.7] RECEPTIONIST: information. Could you please provide it?
+[01:14.7] PATIENT: Kowalski. K-O-W-A-L-S-K-I.
+[01:37.0] RECEPTIONIST: Thank you. Just to confirm, your full name is Dana Kowalski? And your date of birth is September ninth nineteen seventy one. Is that correct?
+[01:37.1] PATIENT: Yeah, that's right.
+[02:04.7] RECEPTIONIST: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again instead. Which would you prefer?
+[02:05.0] PATIENT: Four one five, five five five, oh  [interrupted]
+[02:08.8] RECEPTIONIST: Would you like to use your phone number to look up
+[02:08.9] PATIENT: Oh eight eight three. Four one five, five five five, oh eight eight three.
+[02:32.4] RECEPTIONIST: I have your phone number as eight eight three four one five five five five zero. Is that correct? Your date of birth is September ninth nineteen seventy one?
+[02:32.6] PATIENT: No, that's not right. It's four one five, five five five, oh eight eight three.  [interrupted]
+[02:42.9] RECEPTIONIST: Could you
+[02:43.1] PATIENT: Yeah, my date of birth is correct though.
+[02:59.7] RECEPTIONIST: I wasn't able to find your record with the information provided. I'll connect you to our patient support team so they can help you update your details. Please stay on the line.
+[03:01.7] RECEPTIONIST: Transferring you now. Thank you.

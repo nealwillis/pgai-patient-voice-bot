@@ -1,0 +1,36 @@
+# Call 20 — refill (Medication refill request)
+# Patient persona : Harriet Pittman
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:01:44 (local)
+# Duration        : 164.0s
+# Audio           : recordings/call-20-refill.ogg
+# Room            : pgai-refill-5d20a8f1
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:20.7] RECEPTIONIST: This call may be recorded for quality and training purposes. Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:20.8] PATIENT: Hi — yeah, I'm almost out of the anti-inflammatory I take for my arthritis. I've only got two pills left and the pharmacy says you guys need to authorize the  [interrupted]
+[00:31.8] RECEPTIONIST: Can I assist?
+[00:32.1] PATIENT: Yeah, sorry — the pharmacy needs you to authorize a refill. I'm down to my last two pills.  [interrupted]
+[00:44.4] RECEPTIONIST: Can you please provide your full name and date of birth?
+[00:44.7] PATIENT: Harriet Pittman. June sixth, nineteen fifty-two.
+[01:07.8] RECEPTIONIST: I have your name as Harriet Pittman. And your date of birth as June six nineteen fifty two. Is that correct? If so, please spell your first and last name for me.
+[01:07.8] PATIENT: Yeah, that's right. H-A-R-R-I-E-T. P-I-T-T-M-A-N.
+[01:30.5] RECEPTIONIST: I have your phone number as five zero seven two six two three six eight
+[01:36.2] RECEPTIONIST: Oh, and your date of birth as June sixth nineteen fifty two. Is that correct?
+[01:36.7] PATIENT: No, that's not right. My number is five one two, five five five, six two zero nine.
+[02:00.1] RECEPTIONIST: I can't proceed further right now, but I can make sure our clinic support team follows up with you. You like me to connect you to our patient support team?
+[02:14.0] RECEPTIONIST: I'm unable to verify your information right now.
+[02:23.6] RECEPTIONIST: So I can't proceed further.
+[02:24.7] RECEPTIONIST: I can connect you to our patient support team for help.
+[02:25.3] RECEPTIONIST: Would you like to be connected?
+[02:26.1] RECEPTIONIST: Are you still there?
+[02:39.9] RECEPTIONIST: I am going to end the call now. Goodbye.

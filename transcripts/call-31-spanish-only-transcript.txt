@@ -1,0 +1,41 @@
+# Call 31 — spanish-only (Edge case: caller speaks only Spanish)
+# Patient persona : Juana Moreno
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:35:05 (local)
+# Duration        : 183.0s
+# Audio           : recordings/call-31-spanish-only.ogg
+# Room            : pgai-spanish-only-5188013a
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.9] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:11.5] RECEPTIONIST: Para español, oprima el dos.
+[00:16.2] RECEPTIONIST: Thanks for calling Pivot Point Orthopedics. Part of Pretty Good AI.
+[00:18.0] RECEPTIONIST: May I help you today?
+[00:18.0] PATIENT: Buenos días, necesito una cita para mi hombro.
+[00:36.9] RECEPTIONIST: Hello. Thanks for calling Pivot Point Orthopedics.
+[00:38.8] RECEPTIONIST: How can I help you today?
+[00:38.8] PATIENT: Necesito una cita. Me duele el hombro derecho desde hace dos semanas.
+[00:57.9] RECEPTIONIST: Hello. You've reached Pivot Point Orthopedics.
+[00:59.7] RECEPTIONIST: How can I help you today?
+[00:59.7] PATIENT: Hola, necesito... una cita para mi hombro. Me duele mucho.
+[01:21.0] RECEPTIONIST: Hello. This is Bivitt Point Orthopedics. How can I help you today?
+[01:21.3] PATIENT: Hay alguien que hable español?
+[01:40.7] RECEPTIONIST: I can share more about Pretty Good AI through a text message. Would you like me to send you a text with more information?
+[01:41.0] PATIENT: No, no. Necesito una cita. Para mi hombro.
+[01:52.3] RECEPTIONIST: No problem. How else can I help you today?
+[01:52.7] PATIENT: Necesito una cita para mi hombro. Duele mucho. Dos semanas.
+[02:10.5] RECEPTIONIST: Alright. What else can I help you with today?
+[02:10.9] PATIENT: Por favor, hay alguien que hable español? No entiendo bien el inglés.
+[02:29.5] RECEPTIONIST: Alright. Is there anything else I can help you with today?
+[02:29.9] PATIENT: Sí, necesito hablar con alguien en español. Por favor.
+[02:47.9] RECEPTIONIST: Else can I help you with today?
+[02:48.1] PATIENT: Espere, por favor. Necesito una cita. Mi hombro. Alguien que hable español, por favor.

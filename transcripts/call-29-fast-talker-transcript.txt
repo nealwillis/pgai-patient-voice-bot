@@ -1,0 +1,34 @@
+# Call 29 — fast-talker (Edge case: speaks very fast, dense information)
+# Patient persona : Serene Tan
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:30:16 (local)
+# Duration        : 122.4s
+# Audio           : recordings/call-29-fast-talker.ogg
+# Room            : pgai-fast-talker-44b6b0e2
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:08.6] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:09.0] PATIENT: Hi, yeah —  [interrupted]
+[00:17.3] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:17.6] PATIENT: Hi, this is Serene Tan, April twenty-ninth, ninety-two — I need to move an appointment, and I also need to know if you guys take Blue Cross Blue Shield, my new insurance. I've got like ninety seconds.
+[00:39.7] RECEPTIONIST: Just to confirm, I have your name as Serene Tan and your date of birth as April twenty ninth nineteen ninety two. Is that correct?
+[00:39.9] PATIENT: Yeah, that's right.
+[00:57.5] RECEPTIONIST: Would you like me to look up your record using the phone number you have on file with us? If so, please tell me that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[00:57.5] PATIENT: The number on file is six one seven, five five five, three eight eight one.
+[01:19.4] RECEPTIONIST: I have your phone number as six one seven five five five three eight eight one. And your date of birth as April twenty ninth nineteen ninety two. Is that correct?
+[01:19.4] PATIENT: Yeah, that's correct. So can we move the appointment or — what's the date on the one I have?
+[01:42.2] RECEPTIONIST: I can't pull up your record right now. So I'm unable to see your appointment details. I'll make sure our clinic support team follows up with you. Please hold while I document this for our team.
+[01:42.2] PATIENT: Wait — can you just ask them about the  [interrupted]
+[01:46.0] RECEPTIONIST: Transferring you now. Thank you.
+[01:46.1] PATIENT: Hello, this is clinic support. How can I help  [interrupted]
+[01:50.8] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[01:51.1] PATIENT: What? Hello? Is anyone there?

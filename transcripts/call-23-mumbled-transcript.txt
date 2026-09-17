@@ -1,0 +1,47 @@
+# Call 23 — mumbled (Edge case: unclear, mumbled, rambling request)
+# Patient persona : Ruth Ann Mabry
+# Number dialed   : +18054398008
+# Started         : 2026-09-17 13:11:43 (local)
+# Duration        : 182.4s
+# Audio           : recordings/call-23-mumbled.ogg
+# Room            : pgai-mumbled-f1459dba
+#
+# RECEPTIONIST = the office's AI receptionist (audio channel 0)
+# PATIENT      = our bot                      (audio channel 1)
+#
+# Timestamps are mm:ss.s from the start of the audio, and mark when the
+# turn was captured, not when it began: a RECEPTIONIST stamp is when their
+# speech finished transcribing, a PATIENT stamp is when our reply started.
+# So the interval between a PATIENT line and the next RECEPTIONIST line is
+# their think time plus their speaking time. Use the audio to separate the
+# two, and to hear overlaps.
+
+[00:09.2] RECEPTIONIST: This call may be recorded for quality and training purposes.
+[00:09.5] PATIENT: Yeah, okay.  [interrupted]
+[00:17.7] RECEPTIONIST: Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+[00:18.1] PATIENT: Yes, hello, I was — it's the, the thing round the side, when I get up.
+[00:28.6] RECEPTIONIST: I wanna make sure I understand
+[00:34.2] RECEPTIONIST: Are you calling about pain or discomfort around your side when you get up?
+[00:40.0] RECEPTIONIST: Would you like to schedule an appointment to have this checked? Do you have a specific question about your symptoms?
+[00:40.3] PATIENT: I need to see somebody about it. My daughter said I should call.
+[00:55.0] RECEPTIONIST: Understood. Hope you get scheduled to see one of our providers. Are you calling for yourself? Or are you helping someone else today?
+[00:55.0] PATIENT: It's for me. I'm Ruth Ann Mabry.
+[01:04.5] RECEPTIONIST: I see you're calling from the number we have on file.
+[01:06.6] RECEPTIONIST: Am I speaking with Marcus?
+[01:06.6] PATIENT: No, this is Ruth Ann. I think you've got my husband's number on file.
+[01:21.5] RECEPTIONIST: Thanks for clarifying. Please provide your full date of birth so I can look up your information.
+[01:21.9] PATIENT: August eighteenth, nineteen forty-nine.
+[01:38.1] RECEPTIONIST: Could you please spell your first and last name for me? Just to make sure I have it correct? I have your date of birth. As August eighteenth nineteen forty nine.
+[01:38.1] PATIENT: R-U-T-H A-N-N, M-A-B-R-Y.
+[02:01.5] RECEPTIONIST: Would you like me to look up your record using the phone number you have on file with us? If so, please tell me that number. If you're not sure, I can confirm your name and date of birth again instead. Which would you prefer?
+[02:01.6] PATIENT: The number is six one five, five five five, two two three eight.
+[02:14.5] RECEPTIONIST: I have your phone number as six one five five five five
+[02:16.3] RECEPTIONIST: two two three eight.
+[02:18.1] RECEPTIONIST: And your date of birth
+[02:22.6] RECEPTIONIST: as August eighteenth nineteen forty nine. Is that correct?
+[02:22.9] PATIENT: Yeah, that's right.
+[02:44.0] RECEPTIONIST: I'm unable to find your record in our system right now. I'll connect you to our patient support team so they can help you directly. Please stay on the line.
+[02:46.1] RECEPTIONIST: Transferring you now. Thank you.
+[02:46.2] PATIENT: Okay.
+[02:51.6] RECEPTIONIST: Hello. You've reached the Pretty Good AI test line. Goodbye.
+[02:51.9] PATIENT: Wait — hello? Is anybody there?
