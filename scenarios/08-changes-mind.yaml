@@ -1,6 +1,9 @@
 id: mind-change
 label: "Edge case: changes mind mid-call"
 category: edge-case
+# Accent under test: canadian-english. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "996a8b96-4804-46f0-8e05-3fd4ef1a87cd"
 patient:
   name: "Jordan Fritz"
   dob: "May twenty-fifth, nineteen ninety-six"

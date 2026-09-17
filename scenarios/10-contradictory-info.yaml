@@ -1,6 +1,9 @@
 id: contradictory
 label: "Edge case: gives contradictory information"
 category: edge-case
+# Accent under test: australian. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "8634bd27-0acf-4056-b014-4fea0385ed9e"
 patient:
   name: "Vera Blake"
   dob: "October seventh, nineteen sixty-six"

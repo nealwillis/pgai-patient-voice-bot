@@ -1,8 +1,11 @@
 id: long-silence
 label: "Edge case: long silences mid-call"
 category: edge-case
+# Accent under test: irish. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "d79d2b77-9192-4e10-9407-5d43ca034803"
 patient:
-  name: "Esther Mwangi"
+  name: "Orla Byrne"
   dob: "December eleventh, nineteen seventy-four"
   callback: "three zero three, five five five, five zero two seven"
 reason: >

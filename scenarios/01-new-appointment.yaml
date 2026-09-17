@@ -1,6 +1,9 @@
 id: new-appointment
 label: "Simple new appointment"
 category: happy-path
+# Accent under test: general-american. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "cbaf8084-f009-4838-a096-07ee2e6612b1"
 patient:
   name: "Maya Webb"
   dob: "April twelfth, nineteen eighty-four"

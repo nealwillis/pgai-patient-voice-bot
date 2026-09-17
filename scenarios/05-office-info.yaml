@@ -1,6 +1,9 @@
 id: office-info
 label: "Hours, location and insurance questions"
 category: happy-path
+# Accent under test: british. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "81cd8d19-45e7-47b2-ad0e-bcd94f557ad0"
 patient:
   name: "Cecily Turner"
   dob: "November thirtieth, nineteen eighty-eight"

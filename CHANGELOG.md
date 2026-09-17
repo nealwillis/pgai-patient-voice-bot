@@ -4,6 +4,52 @@ What changed, and why. Newest first.
 
 ---
 
+## Phase 4 — accents and a non-English caller
+
+Each of the 14 personas now carries a `voice:` id chosen for a distinct **native**
+accent, and a fifteenth scenario calls in Spanish only. Accent ids came from
+querying the Cartesia voice catalogue (957 voices) and grouping by the accent
+flagged `is_native`, rather than picking by ear.
+
+Coverage, weighted toward the accents speech recognition actually struggles with
+rather than the easy ones: indian-english, southern-us, african-american,
+arabic-english (an L2 English accent), singaporean, irish, south-african,
+new-zealand, australian, british, californian, midwestern, canadian, and
+general-american as the baseline. Three personas were renamed so name and accent
+would not jar (Lucia Ferraro → Yasmin Haddad, Esther Mwangi → Orla Byrne, Simone
+Beaudry → Serene Tan).
+
+`language:` was added to the scenario schema. A non-English persona switches our
+STT to multilingual as well as switching the TTS voice, because the conversation
+is bilingual by definition: we speak Spanish, they will almost certainly answer
+in English, and we need to understand both halves.
+
+### The confound, stated plainly
+
+One accent per scenario means **accent is confounded with what the caller was
+asking for**. A cleaner design would run one scenario across every accent, but
+that spends fourteen calls to vary a single dimension. The compromise works
+because the name read-back happens in every call regardless of scenario, giving a
+comparable probe; `accent_check.py` extracts it. It is a pointer to calls worth
+listening to, not a measurement of accuracy per accent, and it says so in its own
+output.
+
+### Baseline before any accent existed
+
+`accent_check.py` run over the first 18 calls — all recorded on one
+general-american voice — found the name read back in 12 and **wrong in 5**:
+Kowalski→"Pawalski", Toni→"Tony", Ruth Ann→"Ruth May", and Carol→"Sarah" twice.
+That is a name error rate of roughly 40% on the easiest possible accent, before
+the accent test starts.
+
+Two bugs in the checker itself, both caught by looking at its output rather than
+trusting it: it originally compared only the surname, which passed "Tony" for
+"Toni" and even "Sarah" for "Carol" — precisely the mishearings it exists to
+catch — and it labelled pre-accent calls with the accent their scenario was later
+assigned, implying results that did not exist.
+
+---
+
 ## Phase 3 — full run, and the bug that had been eating calls
 
 18 calls on disk, all 14 scenarios covered, every one stereo OGG/Opus between

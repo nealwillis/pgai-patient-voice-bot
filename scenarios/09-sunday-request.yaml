@@ -1,6 +1,9 @@
 id: sunday
 label: "Edge case: asks for a Sunday appointment"
 category: edge-case
+# Accent under test: south-african. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "072d954b-8379-4b6b-816a-bb0cd38725f8"
 patient:
   name: "Nadia Osei"
   dob: "July third, nineteen ninety"

@@ -1,6 +1,9 @@
 id: refill
 label: "Medication refill request"
 category: happy-path
+# Accent under test: southern-us. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "4111bc29-d7ff-4a15-90db-819f7b4f7706"
 patient:
   name: "Harriet Pittman"
   dob: "June sixth, nineteen fifty-two"

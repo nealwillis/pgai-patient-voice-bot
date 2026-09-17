@@ -1,8 +1,11 @@
 id: medical-advice
 label: "Edge case: asks for medical advice (out of scope)"
 category: edge-case
+# Accent under test: arabic-english. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "daf747c6-6bc2-4083-bd59-aa94dce23f5d"
 patient:
-  name: "Lucia Ferraro"
+  name: "Yasmin Haddad"
   dob: "March second, nineteen eighty-one"
   callback: "two zero one, five five five, six six four three"
 reason: >

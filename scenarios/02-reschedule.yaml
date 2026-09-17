@@ -1,6 +1,9 @@
 id: reschedule
 label: "Reschedule an existing appointment"
 category: happy-path
+# Accent under test: midwestern-american. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "11af83e2-23eb-452f-956e-7fee218ccb5c"
 patient:
   name: "Dana Kowalski"
   dob: "September ninth, nineteen seventy-one"

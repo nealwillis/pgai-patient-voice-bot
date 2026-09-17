@@ -27,6 +27,10 @@ class Scenario:
     # Optional TTS voice id for this persona, so a voice can match the name.
     # Falls back to CARTESIA_VOICE_ID / ELEVENLABS_VOICE_ID.
     voice: str | None = None
+    # BCP-47-ish language for this persona's speech. Anything other than "en"
+    # also switches our STT to multilingual, so we still understand the far end
+    # if they answer in English.
+    language: str = "en"
     # Seconds after the call connects to start talking without waiting for the
     # far end to finish its greeting. None = normal turn-taking (the default).
     speak_first_after: float | None = None
@@ -73,7 +77,19 @@ just asked.
 
 Remember: short spoken sentences, let them finish, pursue the goal, then say
 goodbye and end the call. Never break character.
-"""
+{self._language_note()}"""
+
+    def _language_note(self) -> str:
+        """Extra instruction for a persona who does not speak English."""
+        if self.language == "en":
+            return ""
+        lang = {"es": "Spanish"}.get(self.language, self.language)
+        return (
+            f"\n\nYou speak {lang}, not English. Every word you say is in {lang}.\n"
+            f"If they answer in English, keep going in {lang} -- you do not speak\n"
+            f"enough English to switch. If it becomes obvious they cannot understand\n"
+            f"you, say so in {lang} and ask for someone who speaks it.\n"
+        )
 
 
 def _read_base_prompt() -> str:

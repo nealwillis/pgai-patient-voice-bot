@@ -1,8 +1,11 @@
 id: fast-talker
 label: "Edge case: speaks very fast, dense information"
 category: edge-case
+# Accent under test: singaporean. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "efddb3d2-4464-45e0-9f8a-fcd5fd4fc54f"
 patient:
-  name: "Simone Beaudry"
+  name: "Serene Tan"
   dob: "April twenty-ninth, nineteen ninety-two"
   callback: "six one seven, five five five, three eight eight one"
 reason: >

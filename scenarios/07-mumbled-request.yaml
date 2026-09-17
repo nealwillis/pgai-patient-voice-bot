@@ -1,6 +1,9 @@
 id: mumbled
 label: "Edge case: unclear, mumbled, rambling request"
 category: edge-case
+# Accent under test: new-zealand. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "db408a93-859c-4a0a-b6a2-220c074cc90d"
 patient:
   name: "Ruth Ann Mabry"
   dob: "August eighteenth, nineteen forty-nine"

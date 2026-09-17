@@ -1,6 +1,9 @@
 id: cancel
 label: "Cancel an appointment"
 category: happy-path
+# Accent under test: indian-english. One accent per scenario so the pass
+# costs no extra calls; see CHANGELOG for the confound this introduces.
+voice: "f6141af3-5f94-418c-80ed-a45d450e7e2e"
 patient:
   name: "Priya Raman"
   dob: "January twenty-second, nineteen ninety-three"

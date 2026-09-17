@@ -63,15 +63,26 @@ AGENT_NAME = "pgai-patient"
 # --------------------------------------------------------------------------
 # provider wiring -- each branch is a Phase 2 A/B switch, set via .env
 # --------------------------------------------------------------------------
-def _build_stt():
+def _build_stt(scenario: Scenario | None = None):
+    # A non-English persona means the conversation is bilingual: we speak their
+    # language, the far end most likely answers in English. Multilingual STT keeps
+    # us understanding them either way.
+    lang_multi = bool(scenario and scenario.language != "en")
     if STT_PROVIDER == "livekit":
         # The same Deepgram model, routed through LiveKit's inference gateway and
         # billed against LiveKit credits -- no Deepgram account needed. Costs one
         # extra network hop, so prefer the direct client when a key is available.
-        return inference.STT(model=f"deepgram/{DEEPGRAM_MODEL}", language="en")
+        return inference.STT(
+            model=f"deepgram/{DEEPGRAM_MODEL}",
+            language="multi" if lang_multi else "en",
+        )
     # filler_words keeps the receptionist's "um"s in the transcript, which is
     # evidence we care about when judging its pacing.
-    return deepgram.STT(model=DEEPGRAM_MODEL, language="en-US", filler_words=True)
+    return deepgram.STT(
+        model=DEEPGRAM_MODEL,
+        language="multi" if lang_multi else "en-US",
+        filler_words=True,
+    )
 
 
 def _build_llm():
@@ -94,7 +105,7 @@ def _build_tts(scenario: Scenario | None = None):
             model="eleven_flash_v2_5",
         )
     voice = override or env("CARTESIA_VOICE_ID")
-    kwargs = {"model": CARTESIA_MODEL}
+    kwargs = {"model": CARTESIA_MODEL, "language": scenario.language if scenario else "en"}
     if voice:
         kwargs["voice"] = voice
     return cartesia.TTS(**kwargs)
@@ -120,7 +131,7 @@ def build_session(scenario: Scenario, vad=None) -> AgentSession:
     instead of on a paid call.
     """
     return AgentSession(
-        stt=_build_stt(),
+        stt=_build_stt(scenario),
         llm=_build_llm(),
         tts=_build_tts(scenario),
         vad=vad or silero.VAD.load(),
