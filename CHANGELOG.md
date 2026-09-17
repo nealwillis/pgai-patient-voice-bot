@@ -4,6 +4,42 @@ What changed, and why. Newest first.
 
 ---
 
+## Phase 3 — full run, and the bug that had been eating calls
+
+18 calls on disk, all 14 scenarios covered, every one stereo OGG/Opus between
+121s and 183s. `audit_deliverables.py` added to check that mechanically.
+
+### Root cause of the "worker died" failures: port 8081
+
+The worker serves health checks over HTTP on a fixed port 8081 in production
+mode. When a worker is orphaned — its parent killed, as happened twice — it keeps
+that socket. The **next** worker then dies at startup with
+`WinError 10048: only one usage of each socket address ... is normally permitted`,
+before it can register, and the run loses a scenario. That is what silently ate
+the first `--all` attempt and what stopped `privacy-probe` from running.
+
+Fixed by passing `port=0`, letting the OS assign an ephemeral port (verified:
+`HTTP server listening on :49357`). Back-to-back runs and stale workers can no
+longer collide. This is the fix that should have come instead of "it didn't
+reproduce, so harden the runner and move on" — the retry logic was worth having,
+but it was treating a symptom.
+
+### Submission hardening
+
+- `preflight.py` crashed from any working directory except the project root,
+  with a misleading `FileNotFoundError: run_calls.py`. Now uses absolute paths.
+- `requirements.txt`: `av`, `numpy` and `pydantic` are imported directly by our
+  code but were only arriving transitively via `livekit-agents` — now pinned.
+  `boto3` removed; it was dead weight from the abandoned S3/egress plan.
+- README gained the `download-files` step. Without it the Silero and
+  turn-detector weights download during the **first paid call**.
+- ARCHITECTURE gained the two sections that were thin: why the phone connection
+  needs two trunk objects, and the admitted latency cost of the hosted turn
+  detector (a network round trip per turn boundary) plus why the interruption
+  thresholds are set where they are.
+
+---
+
 ## Phase 2, iteration 2 — calls 02 and 03
 
 ### Both prompt fixes landed
