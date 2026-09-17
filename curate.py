@@ -28,7 +28,11 @@ from src.config import PROJECT_ROOT, RECORDINGS_DIR, TRANSCRIPTS_DIR
 from src.pacing import analyze_audio
 
 EXTRA_DIR = RECORDINGS_DIR / "extra"
-TARGET_KEEP = 12
+# One call per scenario. A tighter cap of 10-12 would drop `refill`,
+# `office-info` and `spanish-only`, and the first two are explicitly required
+# coverage -- losing a required scenario is a worse outcome than featuring a call
+# whose opener runs long, so the cap is the scenario count rather than a number.
+TARGET_KEEP = None
 BASELINE_CALL = 1  # pre-tuning; never featured
 
 
@@ -100,7 +104,7 @@ def choose(calls: list[Call]) -> tuple[list[Call], list[Call]]:
         if cur is None or c.score() > cur.score():
             best[c.scenario] = c
     ranked = sorted(best.values(), key=lambda c: c.score(), reverse=True)
-    keep = ranked[:TARGET_KEEP]
+    keep = ranked if TARGET_KEEP is None else ranked[:TARGET_KEEP]
     keep_idx = {c.index for c in keep}
     extra = [c for c in calls if c.index not in keep_idx]
     return sorted(keep, key=lambda c: c.index), sorted(extra, key=lambda c: c.index)

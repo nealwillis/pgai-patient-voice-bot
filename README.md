@@ -6,7 +6,10 @@ STT, LLM and TTS, no speech-to-speech model, no hosted voice platform.
 
 - **14 patient personas** in [`scenarios/`](scenarios/) as editable YAML
 - **Stereo recordings** in [`recordings/`](recordings/) — far end on channel 0, our
-  patient on channel 1, so overlaps are audible and measurable
+  patient on channel 1, so overlaps are audible and measurable. One call per
+  scenario; the other 22 calls from tuning and accent passes are in
+  [`recordings/extra/`](recordings/extra/), including `call-01`, the pre-tuning
+  baseline kept as the "before" case (see [CHANGELOG.md](CHANGELOG.md))
 - **Timestamped transcripts** in [`transcripts/`](transcripts/)
 - **Findings** in [`BUG_REPORT.md`](BUG_REPORT.md), generated then hand-reviewed
 - Design rationale in [`ARCHITECTURE.md`](ARCHITECTURE.md), iteration log in
@@ -26,6 +29,11 @@ STT, LLM and TTS, no speech-to-speech model, no hosted voice platform.
 ### 1. Install
 
 Python 3.10–3.13 (developed and tested on 3.13).
+
+**On Windows, clone somewhere short** such as `C:\dev\pgai`. Some dependency
+filenames are long enough that a deep clone path breaks `pip install` with
+`OSError: [Errno 2] No such file or directory` — that is Windows' 260-character
+limit, not a broken package. Enabling Long Path support also fixes it.
 
 ```bash
 python -m venv .venv
